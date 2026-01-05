@@ -1,46 +1,38 @@
-# 4. Create와 Read 조합
-# 01. 이름 하나 입력 받아 리스트에 추가 후 전체 출력
-name = input()
-members = []
-members.append(name)
-print(members)
-# 02. 이름 세 개 입력 받아 리스트에 추가 후 전체 출력
-name1 = input()
-name2 = input()
-name3 = input()
-members = []
-members.append(name1)
-members.append(name2)
-members.append(name3)
-print(members)
-# 03. 이름 입력 받아 추가, 전체 개수 출력
-name = input()
-members = ["가나다", "라마바"]
-members.append(name)
-count = len(members)
-print(count)
-# 04. 반복문으로 여러 이름 입력 받아 리스트 구성
-members = []
+# 클라우드가 만들어준 추가 연습
+# 1. 기본 흐름 익히기
+movies = []
+movies.append("쉐이프 오브 워터")
+movies.append("라라랜드")
+movies.append("인터스텔라")
+
+for movie in movies:
+    print(movie)
+
+# 2. enumerate 익히기
+movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+
+for idx, movie in enumerate(movies):
+    print(f"{idx + 1}. {movie}")
+
+# 3. pop 익히기
+movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+# *pop은 ()안에 아무것도 안 적혀 있으면 마지막 요소를 삭제한다.
+deleted = movies.pop()
+print(f"삭제된 영화: {deleted}")
+print(f"남은 영화: {movies}")
+
+# 4. 입력 받아 추가하기
+movies = []
+# *movies로 빈 바구니를 먼저 만들고 range로 3번 반복
 for i in range(3):
-    name = input()
-    members.append(name)
-print(members)
-# 05. 리스트에서 특정 이름 검색
-keyword = input()
-members = ["가나다", "라마바", "사아자"]
-for member in members:
-    if member == keyword:
-        print(member)
-# 06. 리스트에서 특정 인덱스 요소 출력
-members = ["가나다", "라마바", "사아자"]
-target = members[1]
-print(target)
-# 07. 입력 받은 인덱스로 요소 접근
-idx = int(input())
-members = ["가나다", "라마바", "사아자"]
-target = members[idx]
-print(target)
-# 08. 전체 목록 번호와 함께 출력
-members = ["가나다", "라마바", "사아자"]
-for idx, member in enumerate(members):
-    print(idx,member)
+    movie = input("영화 제목: ")
+    movies.append(movie)
+print("등록된 영화:", movies)
+
+# 5. 검색하기
+movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+keyword = input("찾을 영화: ")
+
+for movie in movies:
+    if movie == keyword:
+        print(f"찾았습니다: {movie}")
