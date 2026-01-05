@@ -6,6 +6,7 @@ movies = []
 # 1-2. 3번 반복하면서 영화 제목 입력 받아 추가하기
 for i in range(3):
     movie = input()
+    movies.append(movie)
     # 1-3. enumerate 사용해서 번호와 함께 출력하기
-    for idx, movie in enumerate(movies):
-        print(idx,movies)
+for idx, movie in enumerate(movies):
+    print(idx+1, movie)
