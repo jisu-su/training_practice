@@ -4,8 +4,9 @@
 # 1-1. 빈 리스트 movies 만들기
 movies = []
 # 1-2. 3번 반복하면서 영화 제목 입력 받아 추가하기
-for movie in range(3):
-    movies = input()
+for i in range(3):
+    movie = input()
+    movies.append(movie)
     # 1-3. enumerate 사용해서 번호와 함께 출력하기
-for idx, movie in enumerate(movies):
-    print(idx+1, movie)
+    for idx, movie in enumerate(movies):
+        print(idx,movies)
