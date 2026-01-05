@@ -9,4 +9,4 @@ for i in range(3):
     movies.append(movie)
     # 1-3. enumerate 사용해서 번호와 함께 출력하기
 for idx, movie in enumerate(movies):
-    print(idx+1,movies)
+    print(f"{idx+1}. {movie}")
