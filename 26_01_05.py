@@ -1,32 +1,32 @@
-# 1. 변수 선언과 할당
-# 01. 문자열 변수 하나 선언
-name = "가나다"
-print(name)
-# 02. 숫자 변수 하나 선언
-age = 26
-print(age)
-# 03. 문자열 변수 두개 선언 후 연결
-first = "가"
-last = "나다"
-full = first + last
-print(full)
-# 04. 숫자 변수 두 개 선언 후 연산
-age = 26
-next_year = age + 1
-print(next_year)
-# 05. 변수에 새 값 재활당
-nickname = "가나다"
-nickname = "라마바"
-print(nickname)
-# 06. 변수 값을 다른 변수에 복사
-original = "가나다"
-copy = original
-print(copy)
-# 07. 입력 받은 값을 변수에 저장
-name = input()
-print(name)
-# 08. 입력 받은 두 값을 각각 변수에 저장
-name = input()
-age = input()
-print(name)
-print(age)
+# 2. 리스트 선언과 접근
+# 01. 빈 리스트 선언
+members = []
+print(members)
+# 02. 값이 있는 리스트 선언
+members = ["가나다", "라마바", "사아자"]
+print(members)
+# 03. 리스트 첫 번째 요소 접근
+members = ["가나다", "라마바", "사아자"]
+first = members[0]
+print(first)
+# 04. 리스트 마지막 요소 접근
+members = ["가나다", "라마바", "사아자"]
+last = members[-1]
+print(last)
+# 05. 리스트 길이 확인
+members = ["가나다", "라마바", "사아자"]
+count = len(members)
+print(count)
+# 06. 리스트에 요소 추가(append)
+members = ["가나다"]
+members.append("라마바")
+print(members)
+# 07. 리스트 특정 위치 요소 수정
+members = ["가나다", "라마바", "사아자"]
+members[1] = "추가 요소"
+print(members)
+# 08. 리스트 요소 삭제(pop)
+members = ["가나다", "라마바", "사아자"]
+removed = members.pop(1)
+print(removed)
+print(members)
