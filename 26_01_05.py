@@ -23,13 +23,26 @@
 # # 2-5. 남은 영화 목록 출력
 # print(f"남은 영화: {movies}")
 
-# 3. 영화 검색 (부분 일치)
-# 3-1. 영화 리스트 만들기
-movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
-# 3-2. 검색어 입력받기
-keyword = input()
-# 3-3. 모든 영화를 확인하면서 
-for movie in movies:
-# 3-4. 검색어가 포함된(in) 영화만 출력
-    if keyword in movie:
-        print(f"찾았습니다: {movie}")
+# # 3. 영화 검색 (부분 일치)
+# # 3-1. 영화 리스트 만들기
+# movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+# # 3-2. 검색어 입력받기
+# keyword = input()
+# # 3-3. 모든 영화를 확인하면서 
+# for movie in movies:
+# # 3-4. 검색어가 포함된(in) 영화만 출력
+#     if keyword in movie:
+#         print(f"찾았습니다: {movie}")
+
+# 4. 나이 평균 계산하기
+# 4-1. 나이 리스트 만들기 [26, 27, 28]
+ages = [26, 27, 28]
+# 4-2. total 변수를 0으로 초기화
+total = 0
+# 3. 모든 나이를 순회하면서 total에 더하기
+for age in ages:
+    total = total + age
+# 4. 평균 계산 (total / 리스트 길이)
+average = total / len(ages)
+# 5. 평균 출력
+print(f"평균나이: {average}")
