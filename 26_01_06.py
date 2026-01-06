@@ -1,59 +1,94 @@
-# 3. 조건문 기초
-# 3-1. if문 단독 사용
-name = "가나다"
-if name == "가나다":
-    print(name)
-# 3-2. if-else 사용
-age = 26
-if age >= 30:
-    print("30대")
-else:
-    print("20대")
-# 3-3. if-elif-else 사용
-age = 26
-if age < 20:
-    print("10대")
-elif age < 30:
-    print("20대")
-else:
-    print("30대 이상")
-# 3-4. 숫자 비교 조건문
+# 4. Create, Read Update 조합
+# 4-1. 이름과 나이 입력 받아 딕셔너리로 리스트에 추가
+name = input()
 age = int(input())
-result = ""
-if age > 26:
-    result = "가나다보다 많음"
-elif age == 26:
-    result = "가나다랑 동갑"
-else:
-    result = "가나다보다 적음"
-print(result)
-# 3-5. 문자열 비교 조건문
-nickname = input()
-result = ""
-if nickname == "라마바":
-    result = "마바입니다"
-elif nickname == "사아자":
-    result = "아자입니다"
-else:
-    result = "알 수 없음"
-print(result)
-# 3-6. in 연산자로 포함 여부 확인
+
+members = []
+person = {"name": name, "age": age}
+members.append(person)
+
+print(members)
+# 4-2. 전체 목록 순회하며 이름만 출력
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27},
+    {"name": "사아자", "age": 28}
+]
+
+for member in members:
+    print(member["name"])
+# 특정 이름 검색하여 해당 딕셔너리 출력
 keyword = input()
-members = ["가나다", "라마바", "사아자"]
-if keyword in members:
-    print("존재함")
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27},
+    {"name": "사아자", "age": 28}
+]
+
+for member in members:
+    if member["name"] == keyword:
+        print(member)
+# 4-4. 특정 이름의 나이 수정
+target_name = input()
+new_age = int(input())
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27}
+]
+for member in members:
+    if member["name"] == target_name:
+        member["age"] = new_age
+
+print(members)
+# 4-5. 인덱스로 접근하여 값 수정
+idx = int(input())
+new_name = input()
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27}
+]
+members[idx]["name"] = new_name
+
+print(members)
+# 4-6. 조건에 맞는 항목만 필터링하여 출력
+min_age = int(input())
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27},
+    {"name": "사아자", "age": 28}
+]
+filtered = []
+for member in members:
+    if member["age"] >= min_age:
+        filtered.append(member)
+
+print(filtered)
+# 4-7. 메뉴 선택에 따라 다른 동작 수행
+menu = input()
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "사아자", "age": 27}
+]
+
+if menu == "1":
+    print(members)
+elif menu == "2":
+    print(len(members))
 else:
-    print("존재하지 않음")
-#  3-7. and 조건 사용
-name = "가나다"
-age = 26
-if name == "가나다" and age == 26:
-    print("본인 확인 완료")
-else:
-    print("본인 아님")
-# 3-8. or 조건 사용
-nickname = "사아자"
-if nickname == "라마바" or nickname == "사아자":
-    print("별명 있음")
-else:
-    print("별명 없음")
+    print("잘못된 입력")
+# 4-8. 반복 입력과 조회를 while로 구성
+members = []
+while True:
+    cmd = input()
+    if cmd == "q":
+        break
+    name = input()
+    age = int(input())
+    members.append({"name": name, "age":age})
+
+print(members)
