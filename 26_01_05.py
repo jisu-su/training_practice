@@ -25,3 +25,12 @@
 
 # 3. 영화 검색 (부분 일치)
 # 3-1. 영화 리스트 만들기
+movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+# 3-2. 검색어 입력받기
+search = input()
+# 3-3. 모든 영화를 확인하면서 
+for movie in movies:
+# 3-4. 검색어가 포함된(in) 영화만 출력
+    if search in movies:
+        print(f"찾을 영화: {search}")
+print(f"찾았습니다: {movies}")
