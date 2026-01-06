@@ -11,11 +11,17 @@
 # for idx, movie in enumerate(movies):
 #     print(f"{idx + 1}. {movie}")
 
-# 2. 마지막 영화 삭제하고 확인 메세지
-# 2-1. 영화 리스트 만들기 (3개)
-movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
-# 2-2. 전체 영화 출력하기
-print(movies)
-# 2-3. 마지막 영화를 pop으로 삭제하고 deleted 변수에 저장
-deleted = movies.pop()
-print(f"삭제된 영화: {deleted}")
+# # 2. 마지막 영화 삭제하고 확인 메세지
+# # 2-1. 영화 리스트 만들기 (3개)
+# movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
+# # 2-2. 전체 영화 출력하기
+# print(movies)
+# # 2-3. 마지막 영화를 pop으로 삭제하고 deleted 변수에 저장
+# deleted = movies.pop()
+# # 2-4. "삭제된 영화: __" 출력
+# print(f"삭제된 영화: {deleted}")
+# # 2-5. 남은 영화 목록 출력
+# print(f"남은 영화: {movies}")
+
+# 3. 영화 검색 (부분 일치)
+# 3-1. 영화 리스트 만들기
