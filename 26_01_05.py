@@ -17,6 +17,5 @@ movies = ["쉐이프 오브 워터", "라라랜드", "인터스텔라"]
 # 2-2. 전체 영화 출력하기
 print(movies)
 # 2-3. 마지막 영화를 pop으로 삭제하고 deleted 변수에 저장
-movies.pop()
 deleted = movies.pop()
 print(f"삭제된 영화: {deleted}")
