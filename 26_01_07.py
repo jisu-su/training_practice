@@ -1,43 +1,74 @@
-# 1. 함수 정의 기초
-# 1-1. 매개 변수 없는 함수 정의와 호출
-def greet():
-    print("안녕하세요")
+# 2. CRUD 함수화 
+# # 2-1. 데이터 추가 함수 (Create) - 이름만
+# name = input()
 
-greet()
-# 1-2. 매개변수 하나 있는 함수
-def greet(name):
-    print(name)
+# members = []
 
-greet("가나다")
-# 1-3. 매개변수 두 개 있는 함수
-def introduce(name, age):
-    print(name, age)
+# def add_member(members, name):
+#     members.append(name)
 
-introduce("가나다", 26)
-# 1-4. 반환값 없는 함수
-def show_name(name):
-    print(name)
+# add_member(members, name)
+# print(members)
+# # 2-2. 데이터 추가 함수 (Create) - 이름과 나이
+# name = input()
+# age = int(input())
 
-result = show_name("가나다")
+# members =[]
 
-print(result)
-# 1-5. 반환값 있는 함수
-def get_name():
-    return "가나다"
+# def add_member(members, name, age):
+#     person = {"name": name, "age": age}
+#     members.append(person)
 
-result = get_name()
+# add_member(members, name, age)
+# print(members)
+# # 2-3. 전체 조회 함수 (Read) - 리스트 출력
+# members = [
+#     {"name": "가나다", "age": 26},
+#     {"name": "라마다", "age": 27}
+# ]
 
-print(result)
-# 1-6. 리스트를 매개변수로 받는 함수
-def show_all(members):
+# def read_all(members):
+#     for member in members:
+#         print(member)
+
+# read_all(members)
+# # 2-4. 전체 조회 함수 (Read) - 번호와 함께 출력
+# members = [
+#     {"name": "가나다", "age": 26},
+#     {"name": "라마다", "age": 27}
+# ]
+
+# def read_all_with_index(members):
+#     for idx, member in enumerate(members):
+#         print(idx, member["name"], member["age"])
+
+# read_all_with_index(members)
+# # 2-5. 단건 조회 함수 (Read) - 인덱스로 검색
+# idx = int(input())
+
+# members = [
+#     {"name": "가나다", "age": 26},
+#     {"name": "라마바", "age": 27}
+# ]
+
+# def read_by_index(members, idx):
+#     return members[idx]
+
+# result = read_by_index(members, idx)
+# print(result)
+# 2-6. 단건 조회 함수 (Read) - 이름으로 검색
+keyword = input()
+
+members = [
+    {"name": "가나다", "age": 26},
+    {"name": "라마바", "age": 27}
+]
+
+def read_by_name(members, keyword):
     for member in members:
-        print(member)
+        if member["name"] == keyword:
+            return member
+    return None
 
-data = ["가나다", "라마바", "사아자"]
-show_all(data)
-# 1-7. 딕셔너리를 매개변수로 받는 함수
-def show_person(person):
-    print(person["name"], person["age"])
-
-data = {"name": "가나다", "age": 26}
-show_person(data)
+result = read_by_name(members, keyword)
+print(result)
